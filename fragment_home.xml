@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Margh.HomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvHaed"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="May your evening be filled  with tranqulity"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/homeLayoutLinear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvHaed"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnInspiration"
+                android:layout_width="130dp"
+                android:layout_height="60dp"
+                android:backgroundTint="@color/blueD"
+                android:padding="5dp"
+                android:text="Inspirational"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="7dp"
+                android:background="@drawable/edit_bg"
+                android:drawableLeft="@drawable/baseline_search_24"
+                android:padding="5dp" />
+
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleHome"
+            android:layout_width="match_parent"
+            tools:listitem="@layout/home_layout"
+            android:layout_height="match_parent"
+            android:layout_below="@id/homeLayoutLinear" />
+
+    </RelativeLayout>
+
+
+</FrameLayout>
